@@ -19,6 +19,39 @@ Fuente: [Javascript - Wikipedia](http://es.wikipedia.org/wiki/JavaScript)
 
 Fuente: [JQuery - Wikipedia](http://es.wikipedia.org/wiki/Jquery)
 
+##Instrucciones para ejecutar en local
+1. Clona este repositorio para disponer del código:
+
+        $ git clone git@github.com:DavidHerBet/SYTW-pr7-SinatraDataMapper.git
+
+2. Instala las gemas correspondientes sin el entorno de producción para que todo funcione correctamente:
+
+        $ bundle install --without production
+
+3. Ejecuta el programa de forma manual o mediante Rake:
+
+        $ rackup
+        $ rake
+
+5. Abre el navegador y ve al puerto 9292 para ver la aplicación:
+
+        $ http://localhost:9292/
+
+6. Visualiza los estilos y juega al tres en raya.
+
+7. Créate un usuario, se guardarán los datos de tus partidas. Para ello deberás registrarte yendo al enlace "Signup" y, tras introducir tus datos, automáticamente se te creará la cuenta y se logueará.
+
+8. Consulta los datos de las partidas de otros jugadores yendo al enlace "Users".
+
+9. Finalmente, comprueba que al clickar sobre una casilla para realizar tu jugada, a la URL no se le añade algo como "/a1".
+
+##Deployment en Heroku
+1. Abre el navegador y accede a [Tictactoe AJAX en Heroku](http://david-herbet-tttajax.herokuapp.com/):
+
+        http://david-herbet-tttajax.herokuapp.com/
+
+2. Comprueba que todo funciona correctamente como se menciona más arriba.
+
 ---
 
 Universidad de La Laguna  
