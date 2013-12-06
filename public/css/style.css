@@ -1,0 +1,109 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background: url("/images/blackboard.jpg") repeat;
+  background-size: cover; }
+
+.gameboard {
+  width: 500px;
+  margin: 0 auto;
+  text-align: center; }
+
+.gamerow {
+  clear: both; }
+
+.cell {
+  color: blue;
+  background-color: white;
+  opacity: 0.8;
+  width: 58.82353px;
+  height: 58.82353px;
+  margin: 4.90196px;
+  padding: 45.24887px;
+  float: left; }
+  .cell:hover {
+    color: black;
+    background-color: #9900ff; }
+
+.cross {
+  background: url("/images/cross.gif") no-repeat;
+  background-size: cover; }
+
+.circle {
+  background: url("/images/circle.gif") no-repeat;
+  background-size: cover; }
+
+.base-font, .message {
+  color: #f9a7b0;
+  font: 22px Helvetica, Arial, sans-serif; }
+
+.message {
+  display: inline;
+  background-color: transparent; }
+
+nav {
+  background-color: #000;
+  height: 40px;
+  margin: 10px;
+  text-align: center; }
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px; }
+  nav li {
+    margin: 10px;
+    display: inline; }
+  nav a {
+    text-decoration: none; }
+
+.signup {
+  background-color: #FFF; }
+
+.users {
+  background-color: #FFF;
+  margin: 10px;
+  text-align: center;
+  padding-top: 2.5px;
+  padding-bottom: 25px; }
+  .users table {
+    border-collapse: collapse;
+    border: 1px solid black;
+    text-align: center;
+    margin: 0 auto; }
+  .users table, .users th, .users td {
+    border: 1px solid black;
+    padding: 10px; }
+
+footer {
+  margin: 10px;
+  padding-top: 0.5px;
+  padding-bottom: 15px;
+  text-align: center;
+  background-color: #9900FF; }
+  footer p {
+    margin-bottom: 2px; }
+
+.signup, .login {
+  background-color: #FFF;
+  margin: 10px;
+  text-align: center;
+  padding-top: 2.5px;
+  padding-bottom: 25px; }
+
+.error {
+  margin: 10px; }
+  .error p {
+    padding: 10px;
+    background-color: #903; }
+
+.success {
+  margin: 10px; }
+  .success p {
+    padding: 10px;
+    background-color: #00FF66; }
+
+.active {
+  background-color: #C0C0C0; }
+
+.par {
+  background-color: yellow;
+  color: yellow; }

@@ -1,0 +1,13 @@
+- if flash[:error]
+  .error
+    %p= flash[:error]
+.login
+  %h1 Login
+  %form{:name => "login", :method => "POST", :action => "/login"}
+    Username:
+    %input{:type => "text", :name => "user[username]"}
+    %br
+    Password:
+    %input{:type => "password", :name => "user[password]"}
+    %br
+    %input{:type => "submit", :value => "Login"}

@@ -1,0 +1,17 @@
+%nav
+  %ul
+    %li
+      %a{:href => "/"}Home
+    %li
+      %a{:href => "/users/new"}Signup
+    %li
+      %a{:href => "/users"}Users
+    - if session[:user]
+      %li.active
+        %a{:href => "users/#{User.first(:username => "#{session[:user]}").id}"}
+          = session[:user]
+      %li
+        %a{:href => "/logout"}Logout
+    - else
+      %li
+        %a{:href => "/login"}Login

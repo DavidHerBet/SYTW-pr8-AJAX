@@ -1,0 +1,14 @@
+- if flash[:error]
+  .error
+    %p= flash[:error]
+
+.signup
+  %h1 Signup
+  %form{:name => "register", :method => "POST", :action => "/users"}
+    Username:
+    %input{:type => "text", :name => "user[username]"}
+    %br
+    Password:
+    %input{:type => "password", :name => "user[password]"}
+    %br
+    %input{:type => "submit", :value => "Create user"}
