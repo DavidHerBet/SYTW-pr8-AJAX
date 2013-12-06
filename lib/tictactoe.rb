@@ -110,9 +110,18 @@ module TicTacToe
   def computer_wins?
     winner == COMPUTER
   end
+
+  def tie?
+    ((winner != COMPUTER) && (winner != HUMAN))
+  end
 end
 
 helpers TicTacToe
+
+get "/" do
+  session["bs"] = inicializa()
+  haml :game,:locals=>{:b=>board,:m=>''}
+end
 
 get %r{^/([abc][123])?$} do |human|
   if human then
@@ -123,7 +132,7 @@ get %r{^/([abc][123])?$} do |human|
       board[human] = TicTacToe::CIRCLE
       # computer = board.legal_moves.sample
       computer = smart_move
-      redirect to ('/humanwins') if human_wins?
+      return '/humanwins' if human_wins?
       
       # Si el ordenador no puede hacer más movimientos y el
       # humano no ha ganado, significa que ha habido un empate
@@ -136,12 +145,13 @@ get %r{^/([abc][123])?$} do |human|
           user.tied_games += 1
           user.save
         end
-        redirect to('/')
+        return 'tie'
       end
       board[computer] = TicTacToe::CROSS
       puts "I played: #{computer}!"
       puts "Tablero:  #{board.inspect}"
-      redirect to ('/computerwins') if computer_wins?
+      return '/computerwins' if computer_wins?
+      result = computer
     end
   else
     session["bs"] = inicializa()
@@ -149,6 +159,7 @@ get %r{^/([abc][123])?$} do |human|
     pp session
   end
   haml :game, :locals => { :b => board, :m => ''  }
+  result
 end
 
 get '/humanwins' do
@@ -196,6 +207,23 @@ get '/computerwins' do
     haml :final, :locals => { :b => board, :m => m }
   rescue
     redirect '/'
+  end
+end
+
+get '/tie' do
+  puts "/tie session="
+  begin
+    m = if tie? then
+          puts "alsdjflasdjflajsdlfkajsdlfjdkfjasdjflkasjdflkasldkfjadkfjljfl"
+          'TIE'
+        else 
+          puts "COSA RARA"
+          redirect to '/'
+        end
+    haml :final, :locals => { :b => board, :m => m }
+  rescue
+    puts "peppppppppeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+    redirect to '/'
   end
 end
 
