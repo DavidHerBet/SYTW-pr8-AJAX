@@ -10,11 +10,8 @@
       .gamerow
         - row.each_with_index do |p, pindex|
           - if ((pindex % 2 == 0) && (rowindex % 2 == 0)) || (rowindex == pindex)
-            %a(href=p)
-              %div{:id => "#{p}", :class => "cell #{b[p]} par"}
+            %div{:id => "#{p}", :class => "cell #{b[p]} par"}
           - else
-            %a(href=p)
-              %div{:id => "#{p}", :class => "cell #{b[p]} "}
+            %div{:id => "#{p}", :class => "cell #{b[p]} "}
     .message
       %h1= m
-
