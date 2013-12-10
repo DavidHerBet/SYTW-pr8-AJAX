@@ -52,6 +52,9 @@ Fuente: [JQuery - Wikipedia](http://es.wikipedia.org/wiki/Jquery)
 
 2. Comprueba que todo funciona correctamente como se menciona más arriba.
 
+##Agradecimientos
+A [Ángela Hernández Delgado](https://github.com/AngelaHdez), porque gracias a ella he podido realizar y entender la práctica.
+
 ---
 
 Universidad de La Laguna  
